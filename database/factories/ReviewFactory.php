@@ -25,7 +25,7 @@ class ReviewFactory extends Factory
         ];
     }
 
-    public function good() {
+    public function good() { //Good Rating Book
         return $this->state(function (array $attributes) {
            return [
                'rating' => fake()->numberBetween(4,5)
@@ -33,7 +33,7 @@ class ReviewFactory extends Factory
         });
     }
 
-    public function average() {
+    public function average() {  //Average Rating Book
         return $this->state(function (array $attributes) {
             return [
                 'rating' => fake()->numberBetween(2,5)
@@ -41,7 +41,7 @@ class ReviewFactory extends Factory
         });
     }
 
-    public function bad() {
+    public function bad() { //Bad Rating Book
         return $this->state(function (array $attributes) {
             return [
                 'rating' => fake()->numberBetween(1,3)
